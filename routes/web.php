@@ -7,6 +7,9 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\PelangganController;
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
+
+route::resource('user', UserController::class);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::resource('pelanggan', PelangganController::class);
